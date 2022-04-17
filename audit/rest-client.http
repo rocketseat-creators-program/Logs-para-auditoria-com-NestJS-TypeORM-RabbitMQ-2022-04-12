@@ -1,0 +1,17 @@
+GET http://localhost:3000/audit HTTP/1.1
+
+###
+
+POST http://localhost:3000/audit HTTP/1.1
+content-type: application/json
+
+{
+    "reference": "streamer",
+    "method": "INSERT",
+    "old": {},
+    "new": {
+        "key": "teste",
+        "name": "Teste",
+        "status": false
+    }
+}
